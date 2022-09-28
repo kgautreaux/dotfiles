@@ -1,0 +1,23 @@
+[core]
+	autocrlf = input
+	safecrlf = true
+	editor = vim
+[alias]
+  	co = checkout
+  	ci = commit
+  	st = status
+  	br = branch
+  	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  	type = cat-file -t
+  	dump = cat-file -p
+	latest = for-each-ref --sort=-committerdate --format='%(committerdate:short) %(refname:short) [%(committername)]'
+	amend = commit --amend -C HEAD
+	graph = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
+[color]
+	ui = true
+[merge]
+	tool = opendiff
+[push]
+	default = simple
+[init]
+	defaultBranch = main
